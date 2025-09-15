@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: amazon-deployment
-  namespace: default
+  namespace: aws-webapp
   labels:
     app: amazon-app
 spec:
