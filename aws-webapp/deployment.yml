@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: amazon-app
       tier: frontend
-      version: 1.0.0
+      version: "1.0.0"
   template:
     metadata:
       labels:
