@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amazon-deployment
+  namespace: default
+  labels:
+    app: amazon-app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: amazon-app
+      tier: frontend
+      version: 1.0.0
+  template:
+    metadata:
+      labels:
+        app: amazon-app
+        tier: frontend
+        version: 1.0.0
+    spec:
+      containers:
+        - name: amazon-container
+          image: ooghenekaro/amazon:2
+          ports:
+            - containerPort: 3000
