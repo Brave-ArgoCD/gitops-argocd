@@ -5,9 +5,9 @@ metadata:
   labels:
     app: amazon-app
 spec:
-  type: LoadBalancer
+  selector:
+    app: amazon-app
   ports:
     - port: 80
       targetPort: 3000
-  selector:
-    app: amazon-app
+  type: NodePort
