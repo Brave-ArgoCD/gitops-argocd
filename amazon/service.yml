@@ -8,6 +8,7 @@ spec:
   selector:
     app: amazon-app
   ports:
-    - port: 80
-      targetPort: 3000
+    - protocol: TCP
+      port: 3030
+      targetPort: 3030
   type: NodePort
